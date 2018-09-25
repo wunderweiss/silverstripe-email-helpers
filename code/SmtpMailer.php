@@ -360,10 +360,11 @@ class SmtpMailer extends Mailer
             $bounceAddress = $from;
         }
 
-        $headers["X-Mailer"] = X_MAILER;
+        $headers = array();
+        /*$headers["X-Mailer"] = X_MAILER;
         if (!isset($customheaders["X-Priority"])) {
             $headers["X-Priority"] = 3;
-        }
+        }*/
 
         $headers = array_merge((array)$headers, (array)$customheaders);
 
